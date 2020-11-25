@@ -1,0 +1,3 @@
+
+
+Hicimos los ejercicios de DOM.
