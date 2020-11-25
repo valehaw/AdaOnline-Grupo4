@@ -1,0 +1,10 @@
+
+01-SALUDO           HECHO!
+02-COLOR            HECHO!
+03-RGB              FALTA!
+04-IMAGEN           FALTA!
+05-TEMPERATURA      FALTA HTML!
+06-PROGRESO         HECHO!
+07-REACCIONES       HECHO!
+08-CARD             HECHO!
+09-ANIMALES         FALTA!
