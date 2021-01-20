@@ -13,3 +13,8 @@
     font-size: 25px;
     font-weight: 500;  
 }
+
+.input-width{
+    width: 350px;
+    height: 35px;
+}
