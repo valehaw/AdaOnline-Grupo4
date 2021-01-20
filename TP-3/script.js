@@ -21,6 +21,15 @@ fetch(`${base}users`)
 
     .then(data => {
 
+        const trHead = document.createElement('tr');
+        for(prop in Object(data)[0]){
+            th = document.createElement('th');
+            th.innerHTML = prop;
+            trHead.appendChild(th);
+        }
+        thead.appendChild(trHead);
+
+
         for (user of Object(data)){
             const tr = document.createElement('tr');
 
