@@ -5,9 +5,12 @@ fetch(`${base}users`)
     .then(response => response.json()
     )
     .then(data => {
-        tableInfo(data)      
+        tableInfo(data)
+        actionsSection()    
     })
 
+
+/************* Creación de tabla: INFO REQUERIDA Y BOTONES EDIT / DELETE **************/
 
 const tableInfo = (users) => {
     document.getElementById('tbody').innerHTML = "";
@@ -21,7 +24,7 @@ const tableInfo = (users) => {
         const address = document.createElement('td');
         const phone = document.createElement('td');
 
-      
+    
         name.innerHTML = user.fullname;
         email.innerHTML = user.email;
         address.innerHTML = user.address;
@@ -35,4 +38,24 @@ const tableInfo = (users) => {
 
         tbody.appendChild(tr);
     }
+}
+
+
+
+const actionsSection = () => {
+    const rows = tbody.childNodes;
+
+    rows.forEach(row => {
+
+        const editBtn = document.createElement('button');
+        const deleteBtn = document.createElement('button');
+        const tableData = document.createElement('td');
+        
+        editBtn.innerHTML = `<i class="material-icons" title="Edit">&#xE254;</i>`;
+        deleteBtn.innerHTML = `<i class="material-icons" title="Delete">&#xE872;</i>`;
+      
+        tableData.appendChild(editBtn);
+        tableData.appendChild(deleteBtn);
+        row.appendChild(tableData);
+    })
 }
