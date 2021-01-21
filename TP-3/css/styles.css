@@ -18,3 +18,31 @@
     width: 350px;
     height: 35px;
 }
+
+.table-specs{
+    box-sizing: border-box;
+    display: flex;
+    font-size: 14px;
+    margin-left: 60px;
+    width: 100%;
+}
+
+thead{
+    font-size: 14px;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: #445e7c;
+    text-align: center;
+    border-bottom: 2px solid rgb(221, 220, 220);
+    
+}
+
+tbody{
+    width: 100%;
+}
+
+tr{
+    height: 30px;
+    text-align: center;
+}
+
