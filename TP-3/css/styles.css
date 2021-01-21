@@ -52,6 +52,11 @@ tbody{
     color: #8699ad;
   }
 
+input{
+    width: 300px;
+    height: 32px;
+}
+
 footer{
     background-color: #3c536d;
     height: 80px;
