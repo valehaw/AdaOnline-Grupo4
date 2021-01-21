@@ -3,46 +3,133 @@
 }
 
 .container-specs{
-    width: 90%;
     background-color: #445e7c;
-    margin: 0 auto;
     border-radius: 3px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .title{
-    font-size: 25px;
     font-weight: 500;  
-}
-
-.input-width{
-    width: 350px;
-    height: 35px;
 }
 
 .table-specs{
     box-sizing: border-box;
     display: flex;
     font-size: 14px;
-    margin-left: 60px;
     width: 100%;
 }
 
 thead{
+    border-bottom: 2px solid rgb(221, 220, 220);
+    color: #445e7c;
     font-size: 14px;
     font-weight: 100;
     text-transform: capitalize;
-    color: #445e7c;
-    text-align: center;
-    border-bottom: 2px solid rgb(221, 220, 220);
-    
 }
 
 tbody{
+    font-size: 13px;
     width: 100%;
 }
 
-tr{
-    height: 30px;
-    text-align: center;
+footer{
+    background-color: #445e7c;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.footer-specs{
+    font-size: 10px;
+    color: #9eb2c8;
+}
+
+
+
+/****** RESPONSIVE TABLE CONTENT ********/
+
+/* XSmall devices (landscape phones, 544px and down) */
+@media (max-width: 544px) {  
+    tbody {font-size:0.5rem;} /* = 8px*/
+  }
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+  tbody {font-size:0.6rem;} /* = 10px*/
+}
+ 
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {  
+  tbody {font-size:0.7rem;} /* = 11px*/
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  tbody {font-size:0.9rem;} /* = 14px*/
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  tbody {font-size:0.9rem;} /* = 14px*/    
+}
+
+
+
+
+
+/****** RESPONSIVE TITLE HEADER ********/
+
+/* XSmall devices (landscape phones, 544px and down) */
+@media (max-width: 544px) {  
+    .title {font-size:1.0625rem;} /* = 17px*/
+  }
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    .title {font-size:1.25rem;} /* = 20px*/
+}
+ 
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+    .title {font-size:1.4375rem;} /* = 23px*/
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .title {font-size:1.5625rem;} /* = 25px*/
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .title {font-size:1.5625rem;} /* = 25px*/    
+}
+
+
+
+/****** RESPONSIVE ADD USER BUTTON ********/
+
+/* XSmall devices (landscape phones, 544px and down) */
+@media (max-width: 544px) {  
+    #btn-add {font-size:0.4rem;} 
+  }
+
+  /* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    #btn-add {font-size:1rem;} 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+    #btn-add {font-size:1rem;}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #btn-add {font-size:1rem;} 
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    #btn-add {font-size:1rem;}  
+}
