@@ -33,8 +33,23 @@ tbody{
     width: 100%;
 }
 
+.modal-title-specs{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-textspecs{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+::-webkit-input-placeholder { 
+    font-size: 13px;
+    color: #8699ad;
+  }
+
 footer{
-    background-color: #445e7c;
+    background-color: #3c536d;
     height: 80px;
     margin-left: auto;
     margin-right: auto;
