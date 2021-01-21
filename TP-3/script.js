@@ -52,8 +52,15 @@ const actionsSection = () => {
         const tableData = document.createElement('td');
         
         editBtn.innerHTML = `<i class="material-icons" title="Edit">&#xE254;</i>`;
+        editBtn.setAttribute('data-toggle', 'modal');
+        editBtn.setAttribute('data-target', '#edituser');
+
         deleteBtn.innerHTML = `<i class="material-icons" title="Delete">&#xE872;</i>`;
-      
+        deleteBtn.setAttribute('data-toggle', 'modal');
+        deleteBtn.setAttribute('data-target', '#deleteuser');
+
+
+
         tableData.appendChild(editBtn);
         tableData.appendChild(deleteBtn);
         row.appendChild(tableData);
