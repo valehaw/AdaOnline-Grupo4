@@ -44,7 +44,7 @@
             <!--ESTE ES EL INPUT FILTER-->
             
             <div class="d-flex flex-row align-items-center justify-content-end mb-5 input-group mb-3">
-                <input type="text" placeholder="Filter..." class="$gray-300 border rounded pl-3 form-control-color input-width">
+                <input id="filterOption" type="text" placeholder="Filter..." class="$gray-300 border rounded pl-3 form-control-color input-width">
                 <button class="btn btn-outline-secondary ml-2 btn-sm" type="button" id="button-addon2">Filter</button>
             </div>
 
@@ -238,7 +238,7 @@
                         </button>
                     </div>
 
-                    <div class="modal-body">
+                    <div id="erase-info" class="modal-body">
                         <div class="container">
                             
                             <div class="row">
@@ -250,7 +250,7 @@
 
                             <div class="modal-footer">
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-success">Yes, I'm sure</button>
+                                    <button type="submit" id="del-user" class="btn btn-success">Yes, I'm sure</button>
                                 </div>
                             </div>
 
