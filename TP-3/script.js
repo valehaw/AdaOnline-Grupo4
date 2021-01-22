@@ -1,4 +1,6 @@
 const infoErased = document.getElementById('erase-info');
+const infoEdited = document.getElementById('employeeUpdated'); 
+
 
 
 const base = "https://5fd39ad7e9cda40016f5b79f.mockapi.io/";
@@ -11,6 +13,9 @@ fetch(`${base}users`)
         tableInfo(data)
         actionsSection()    
     })
+
+
+
 
 
 /************* Creación de tabla: INFO REQUERIDA Y BOTONES EDIT / DELETE **************/
@@ -60,16 +65,23 @@ const actionsSection = () => {
         
         editBtn.innerHTML = `<i class="material-icons" title="Edit">&#xE254;</i>`;
         editBtn.setAttribute('data-toggle', 'modal');
-        editBtn.setAttribute('data-target', '#edituser');
-
+        editBtn.setAttribute('data-target', '#editemployee');
+        
         deleteBtn.innerHTML = `<i class="material-icons" title="Delete">&#xE872;</i>`;
         deleteBtn.setAttribute('data-toggle', 'modal');
-        deleteBtn.setAttribute('data-target', '#deleteuser');
+        deleteBtn.setAttribute('data-target', '#deleteemployee');
 
-    
+
+        //botones EDITAR & BORRAR
         deleteBtn.addEventListener("click", () => {
             infoErased.value = row.id;
         });
+
+        editBtn.addEventListener('click', () => {
+            infoEdited.value = row.id;
+            getEmployee(row.id);
+        });
+
 
         tableData.appendChild(editBtn);
         tableData.appendChild(deleteBtn);
@@ -103,3 +115,83 @@ delBtn.addEventListener('click', () => {
 
 
 
+
+
+/************* FUNCION PARA EDITAR EMPLEADO **************/
+
+const employeeData = () => {
+  
+    const employeeFullname = document.getElementById('fullname');
+    const employeeEmail = document.getElementById('email');
+    const employeeAddress = document.getElementById('address');
+    const employeePhone = document.getElementById('phone');
+   
+
+    const fullname = employeeFullname.value;
+    const email = employeeEmail.value;
+    const address = employeeAddress.value;
+    const phone = employeePhone.value;
+    return { fullname, email, address, phone }
+}
+
+
+//Función para mostrar los datos del empleado elegido
+const employeeInfo = (data) => {
+    employeeFullname.value = data.fullname;
+    employeeEmail.value = data.email;
+    employeeAddress.value = data.address;
+    employeePhone.value = data.phone;
+}
+
+
+const employeeFullname = document.getElementById('newfullname');
+const employeeEmail = document.getElementById('newemail');
+const employeeAddress = document.getElementById('newaddress');
+const employeePhone = document.getElementById('newphone');
+
+
+
+const employeeDataUpdated = () => {
+    const fullname = employeeFullname.value;
+    const email = employeeEmail.value;
+    const address = employeeAddress.value;
+    const phone = employeePhone.value;
+    return { fullname, email, address, phone }
+}
+
+
+//Para EDITAR empleado seleccionado
+const getEmployee = (id) => {
+    fetch(`${base}users?id=${id}`)
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+            employeeInfo(data[0]);
+        })
+}
+
+
+const employeeModified = (id) => {
+    fetch(`${base}users/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'Application/json'
+        },
+        body: JSON.stringify(employeeDataUpdated())
+    })
+        .then(response => {
+            if (response) {
+                location.href = 'index.html';
+            }
+            return response.json()
+        })
+}
+
+
+const btnSubmitEdited = document.getElementById('btn-employeeUpdated');
+
+btnSubmitEdited.addEventListener('click', () => {
+    const infoEdited = document.getElementById('employeeUpdated');
+    employeeModified(infoEdited.value);
+});
