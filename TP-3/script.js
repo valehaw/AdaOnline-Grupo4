@@ -1,5 +1,7 @@
 const infoErased = document.getElementById('erase-info');
 const infoEdited = document.getElementById('employeeUpdated'); 
+//const jaja = document.getElementById('blablabla'); 
+const form = document.getElementById('form');
 
 
 
@@ -16,12 +18,7 @@ fetch(`${base}users`)
 
 
 
-
-
 /************* Creación de tabla: INFO REQUERIDA Y BOTONES EDIT / DELETE **************/
-
-const table = document.getElementById('list');
-const tbody = document.querySelector('tbody');
 
 
 const tableInfo = (users) => {
@@ -90,6 +87,32 @@ const actionsSection = () => {
 }
 
 
+/************* FUNCION PARA AGREGAR EMPLEADO **************/
+
+
+const myForm = document.getElementById('myForm');
+
+myForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch(`${base}users`, {
+        method: 'POST',
+        body: formData
+    }).then(function (response){
+        return response.text();
+    }).then(function (text){
+        console.log(text);
+    }).catch(function (error){
+        console.error(error);
+    })
+
+});
+
+
+
+
 /************* FUNCION PARA BORRAR EMPLEADO **************/
 
 const delBtn = document.getElementById('del-user');
@@ -115,24 +138,6 @@ delBtn.addEventListener('click', () => {
 
 
 
-
-
-/************* FUNCION PARA EDITAR EMPLEADO **************/
-
-const employeeData = () => {
-  
-    const employeeFullname = document.getElementById('fullname');
-    const employeeEmail = document.getElementById('email');
-    const employeeAddress = document.getElementById('address');
-    const employeePhone = document.getElementById('phone');
-   
-
-    const fullname = employeeFullname.value;
-    const email = employeeEmail.value;
-    const address = employeeAddress.value;
-    const phone = employeePhone.value;
-    return { fullname, email, address, phone }
-}
 
 
 //Función para mostrar los datos del empleado elegido
@@ -171,7 +176,7 @@ const getEmployee = (id) => {
         })
 }
 
-
+//actualizar los datos
 const employeeModified = (id) => {
     fetch(`${base}users/${id}`, {
         method: 'PUT',
