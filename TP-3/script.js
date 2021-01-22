@@ -1,7 +1,7 @@
 const infoErased = document.getElementById('erase-info');
 const infoEdited = document.getElementById('employeeUpdated'); 
-//const jaja = document.getElementById('blablabla'); 
-const form = document.getElementById('form');
+const myForm = document.getElementById('myForm');
+
 
 
 
@@ -87,28 +87,7 @@ const actionsSection = () => {
 }
 
 
-/************* FUNCION PARA AGREGAR EMPLEADO **************/
 
-
-const myForm = document.getElementById('myForm');
-
-myForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-
-    fetch(`${base}users`, {
-        method: 'POST',
-        body: formData
-    }).then(function (response){
-        return response.text();
-    }).then(function (text){
-        console.log(text);
-    }).catch(function (error){
-        console.error(error);
-    })
-
-});
 
 
 
@@ -126,6 +105,8 @@ const userErased = (id) => {
                 location.href = 'index.html';
             }
             return response.json()
+        }).catch(function (error){
+            console.error(error);
         })
         
 };
@@ -137,6 +118,8 @@ delBtn.addEventListener('click', () => {
 });
 
 
+
+/************* FUNCION PARA EDITAR EMPLEADO **************/
 
 
 
@@ -173,6 +156,8 @@ const getEmployee = (id) => {
         })
         .then(data => {
             employeeInfo(data[0]);
+        }).catch(function (error){
+            console.error(error);
         })
 }
 
@@ -190,6 +175,8 @@ const employeeModified = (id) => {
                 location.href = 'index.html';
             }
             return response.json()
+        }).catch(function (error){
+            console.error(error);
         })
 }
 
@@ -200,3 +187,51 @@ btnSubmitEdited.addEventListener('click', () => {
     const infoEdited = document.getElementById('employeeUpdated');
     employeeModified(infoEdited.value);
 });
+
+
+
+
+
+/************* FUNCION PARA AGREGAR EMPLEADO **************/
+
+const employeeData = () => {
+  
+    const employeeFullname = document.getElementById('fullname');
+    const employeeEmail = document.getElementById('email');
+    const employeeAddress = document.getElementById('address');
+    const employeePhone = document.getElementById('phone');
+   
+
+    const fullname = employeeFullname.value;
+    const email = employeeEmail.value;
+    const address = employeeAddress.value;
+    const phone = employeePhone.value;
+    return { fullname, email, address, phone }
+}
+
+
+
+myForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    //const formData = new FormData(this);
+
+    fetch(`${base}users`, {
+        method: 'POST',
+        body: JSON.stringify(employeeData()),
+        headers:{
+            "Content-Type": "application/json"
+        }
+    }).then(function (response){
+        if (response) {
+            location.href = 'index.html';
+        }
+        return response.json();
+    }).then(function (json){
+        console.log(json);
+    }).catch(function (error){
+        console.error(error);
+    })
+
+});
+
