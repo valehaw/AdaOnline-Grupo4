@@ -235,3 +235,34 @@ myForm.addEventListener('submit', function (e) {
 
 });
 
+
+
+
+
+/************* Creación de FILTRO **************/
+
+$('#search-input').on('keyup', function() {
+    let value = $(this).val()
+    console.log(value);
+    let users = searchTable(value, tableInfo);
+
+    tableInfo(users);
+       
+});
+
+
+function searchTable(filter){
+
+    let search = true ? "fullname" : "email";
+
+    fetch(`${base}users?${search}=${filter}`)
+        .then(response => 
+            response.json())
+        .then(data => {
+            tableInfo(data);
+            actionsSection(); 
+        }).catch(function (error){
+            console.error(error);
+        })
+}
+ 
