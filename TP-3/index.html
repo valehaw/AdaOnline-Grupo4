@@ -4,6 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>TRABAJO PRÁCTICO 3</title>
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="css/styles.css">
@@ -16,7 +19,6 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
     
-
   </head>
   <body class="bg-body">
     
@@ -46,7 +48,7 @@
 
             <!--ESTE ES EL INPUT FILTER-->
             
-            <div class="d-flex flex-row align-items-center justify-content-end mb-5 input-group mb-3">
+            <div class="d-flex flex-row align-items-center justify-content-end mb-4 input-group">
                 <input id="search-input" type="text" placeholder="Filter by name..." class="$gray-300 border rounded pl-3 form-control-color input-width">
                 <!-- <button class="btn btn-outline-secondary ml-2 btn-sm" type="button" id="btn-filter">Filter</button> -->
             </div>
@@ -98,7 +100,7 @@
                                             <label for="name" class="form-label text-secondary label-textspecs">Fullname:</label>
                                             <div class="form-group-input">
                                                 <input type="text" name="name" id="fullname" class="form-control"
-                                                    placeholder="Enter your fullname..." required>
+                                                    placeholder="Enter your fullname..." max="50" required>
                                             </div>
                                         </div>
 
@@ -114,7 +116,7 @@
                                             <label for="address" class="form-label text-secondary label-textspecs">Address:</label>
                                             <div class="form-group-input">
                                                 <input type="text" name="address" id="address" class="form-control"
-                                                    placeholder="Enter your address..." required>
+                                                    placeholder="Enter your address..." max="60" required>
                                             </div>
                                         </div>
 
@@ -147,8 +149,6 @@
 
 
 
-
-
         <!-- EDIT EMPLOYEE MODAL -->
         <div class="modal fade" id="editemployee" role="dialog" aria-labelledby="form-modal"
             aria-hidden="true">
@@ -172,7 +172,7 @@
                                         <label for="name" class="form-label text-secondary label-textspecs">Fullname:</label>
                                         <div class="form-group-input">
                                             <input type="text" name="name" id="newfullname"  class="form-control"
-                                                placeholder="Enter the new fullname..." required>
+                                                placeholder="Enter the new fullname..." max="50" required>
                                         </div>
                                     </div>
 
@@ -188,15 +188,15 @@
                                         <label for="address" class="form-label text-secondary label-textspecs">Address:</label>
                                         <div class="form-group-input">
                                             <input type="text" name="address" id="newaddress" class="form-control"
-                                                placeholder="Enter the new address..." required>
+                                                placeholder="Enter the new address..." max="60" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group" id="user-phone">
-                                        <label for="phone" class="form-label text-secondary label-textspecs">Phone Number</label>
+                                        <label for="newphone" class="form-label text-secondary label-textspecs">Phone Number</label>
                                         
                                         <div class="form-group-input">
-                                            <input type="tel" name="phone" id="newphone" class="form-control"
+                                            <input type="tel" name="phone_number" id="newphone" pattern="^\d{4}-\d{3}-\d{4}$" class="form-control"
                                                 placeholder="Enter the new Phone Number..." required>
                                         </div>
 
@@ -217,10 +217,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
 
 
 

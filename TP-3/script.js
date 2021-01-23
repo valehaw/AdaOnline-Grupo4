@@ -191,6 +191,26 @@ btnSubmitEdited.addEventListener('click', () => {
 
 
 
+// /************* Validación TELÉFONO **************/
+
+// function validate(){
+//     let text = document.getElementById("newphone").value;
+
+//     let regx = /^[7-9]\d{9}$/;
+//     if(regx.test(text)){
+//         document.getElementById('lbltext').innerHTML="The phone number entered is VALID!";
+//         document.getElementById('lbltext').style.visibility="visible";
+//         document.getElementById('lbltext').style.color="green";
+//     }else{
+//         document.getElementById('lbltext').innerHTML="The phone number entered is INVALID!";
+//         document.getElementById('lbltext').style.visibility="visible";
+//         document.getElementById('lbltext').style.color="red";
+//     }
+// }
+
+
+
+
 
 /************* FUNCION PARA AGREGAR EMPLEADO **************/
 
@@ -246,10 +266,8 @@ $('#search-input').on('keyup', function() {
     console.log(value);
     let users = searchTable(value, tableInfo);
 
-    tableInfo(users);
-       
+    tableInfo(users);  
 });
-
 
 function searchTable(filter){
 
@@ -266,3 +284,6 @@ function searchTable(filter){
         })
 }
  
+
+
+
