@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+
+  </head>
+  <body>
+
+    <!--formden.js communicates with FormDen server to validate fields and submit via AJAX -->
+<script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+<!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    
+    <!--NAVEGADOR-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="index.html"><img src="img/logo2.svg" width="120px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tours.html">Our Tours<span class="sr-only"></span></a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn bg-success my-2 my-sm-0 text-white" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>    
+    
+    <!--FIN NAVEGADOR-->
+
+    
+
+    <!--CONTENIDO-->
+
+    <!--TITULO DE SECCION-->
+
+    <main class="container tour-padding">
+      <hr>
+      <h2 class="text-center text-secondary mb-5"><b>YOU ARE ONE STEP AWAY OF THE BEST TRIP OF YOUR LIFE</b></h2>
+   
+
+    <!--FIN TITULO DE SECCION-->
+
+
+      <div class="mb-3">
+          <img src="img/other/bar-sunset.jpg" class="card-img-top img-fluid" alt="Pacaya Samiria">  
+      </div>
+    
+      <h3 class="text-left pb-3 text-center"><b>REGISTRATION FORM:</b></h3>
+
+
+      <!--FORMULARIO-->
+
+      <div class="d-flex justify-content-center pb-5 flex-wrap">
+
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 p-3">
+              <div class="card p-3 bg-light">
+                  <div class="card-body p-4">
+
+                      <!--<form>-->
+                        <form class="needs-validation container" novalidate>
+
+                            <h5 class="pb-4"><b>I would like to sign up for:</b></h5>
+
+                            <div class="form-group">
+
+                              <label for="exampleFormTours1">Tour Name</label>
+                              <select name="tours" class="form-control" id="exampleFormTours1" required>
+                                <option value="" selected>All Tours</option>
+                                <option value="pacaya">Birding at Pacaya Samiria</option>
+                                <option value="manu">Birding at Reserva del Manu</option>
+                                <option value="selva">Birding at Selva Virgen</option>
+                              </select>
+                              <div class="invalid-feedback">Please select one of our tour options.</div>
+                            </div>
+
+
+                            <h5 class="py-4"><b>Participant information:</b></h5>
+                                   
+                            <div class="row form-group">
+
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <label for="exampleInputFirstName1">First name:</label>
+                                   <input type="text" class="form-control" required>
+                                   <div class="invalid-feedback">Please enter your first name.</div>
+                              </div>
+                                      
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <label for="exampleInputLastName1">Last name:</label>
+                                 <input type="text" class="form-control" required>
+                                 <div class="invalid-feedback">Please enter your last name.</div>
+                              </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                               <label for="street">Street Address:</label>
+                               <input type="text" name="street" id="street" class="form-control" required />
+                               <div class="invalid-feedback">Please select a valid address.</div>
+                            </div>
+
+
+                            <div class="row form-group">
+                                      
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label for="city">City:</label>
+                                <input type="text" name="city" id="city" class="form-control" required>
+                                <div class="invalid-feedback">Please enter your correct city.</div>
+                              </div>
+                                    
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                <label for="state">Province/State:</label>
+                                <input type="text" name="state" id="state" class="form-control" required>
+                                <div class="invalid-feedback">Please enter your correct province or state.</div>
+                              </div>
+
+                            </div>
+
+
+                            <div class="row form-group">
+                                      
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <label for="zip">Postal/ZIP:</label>
+                                 <input type="text" name="zip" id="zip" class="form-control" required>
+                                 <div class="invalid-feedback">Please enter your correct postal or zip code.</div>
+                              </div>
+                                    
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <label for="country">Country:</label>
+                                 <select class="form-control" id="country" required>
+                                   <option value="" selected>Select your country</option>
+                                   <option value="austria">Austria</option>
+                                   <option value="belgium">Belgium</option>
+                                   <option value="bulgaria">Bulgaria</option>
+                                   <option value="croatia">Croatia</option>
+                                   <option value="czechia">Czechia</option>
+                                   <option value="denmark">Denmark</option>
+                                   <option value="estonia">Estonia</option>
+                                   <option value="finland">Finland</option>
+                                   <option value="france">France</option>
+                                   <option value="germany">Germany</option>
+                                 </select>
+                                 <div class="invalid-feedback">Please enter your country of residence.</div>
+                              </div>
+
+                            </div>
+
+
+                            <div class="row form-group">
+                                      
+                             <div class="col-lg-6 col-md-6 col-sm-12">
+                               <label for="phone">Phone: (Ex: xxxx-xxx-xxxx)</label>
+                               <input type="tel" name="phone" id="phone" class="form-control" pattern="^\d{4}-\d{3}-\d{4}$" required>
+                               <div class="invalid-feedback">Please enter your correct phone number.</div>
+                             </div>
+                                    
+                             <div class="col-lg-6 col-md-6 col-sm-12">
+                               <label for="email">Email:</label>
+                               <input type="email" name="email" id="email" class="form-control" placeholder="name@example.com" required>
+                               <div class="invalid-feedback">Please enter your e-mail address.</div>
+                             </div>
+
+                            </div>
+
+
+                            <div class="row form-group">
+                               <div class="col">
+                                  <label for="date">Date of Birth:</label>
+                                  <input type="date" class="form-control" placeholder="MM/DD/YYYY" required/>
+                                  <div class="invalid-feedback">Please enter your date of birth</div>
+                               </div>
+                            </div>
+
+                            <h5 class="py-4"><b>How did you hear about us?</b></h5>
+
+                            <fieldset class="form-group">
+                              <div class="row">     
+                                 <div class="col-sm-10">
+
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                       <label class="form-check-label" for="gridRadios1">
+                                          <div class="font-2">Web search</div>
+                                       </label>
+                                     </div>
+
+                                     <div class="form-check">
+                                       <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                       <label class="form-check-label" for="gridRadios2">
+                                          <div class="font-2">Advertising</div>
+                                       </label>
+                                      </div>
+
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                                        <label class="form-check-label" for="gridRadios3">
+                                           <div class="font-2">Social Media</div>
+                                        </label>
+                                      </div>
+
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option4">
+                                        <label class="form-check-label" for="gridRadios3">
+                                           <div class="font-2">Word of mouth</div>
+                                        </label>
+                                      </div>
+
+                                 </div>
+                              </div>
+                            </fieldset>
+
+                            <h5 class="py-4"><b>Booking Terms and Conditions:</b></h5>
+
+                            <p>I, as the Participant, agree to the terms of this contract.</p>
+                                          
+                            <fieldset class="form-group">
+                               <div class="row">            
+                                 <div class="col-sm-10">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" id="gridCheckbox1" value="" required>
+                                       <label class="form-check-label" for="gridCheckbox1">
+                                           <div class="font-2">Yes, I agree</div>
+                                           <div class="font-2">I have read and accept the Policies, General information, Terms and Conditions, and the Release of all claims contained here. I authorize "Condé Nast Traveler" to make reservations for me according to the above information.</div>
+                                       </label>
+                                       <div class="invalid-feedback pt-3">You have to agree to continue.</div>
+                                     </div>
+                                 </div>
+                               </div>
+                             </fieldset>
+
+                            <h5 class="py-4"><b>Payment method:</b></h5>
+
+                            <div class="accordion" id="accordionExample">
+                      
+                              <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                  <h2 class="mb-0">
+                                     <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Bank Transfer
+                                     </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                  <div class="card-body">
+                                     <div class="font-2 text-center"><b>**Remember!</b> If you choose the "Bank Transfer" option we will be contacting you as soon as we can to give you our bank information and help you during the process.</div>
+                                     <a class="d-flex justify-content-center text-decoration-none" href="bank-transfer.html"><button type="button" class="btn btn-success btn-sm my-4">Proceed</button></a>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card">
+                                <div class="card-header" id="headingThree">
+                                  <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                       Credit Card
+                                    </button>
+                                  </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                  <div class="card-body">
+                                    <div class="row mt-5">
+                                      <div class="container-fluid d-flex justify-content-center">
+                                        <div class="col-sm-12 col-md-10 pb-3">
+                                          <div class="card">
+
+                                            <div class="card-header">
+                                              <div class="row">
+
+                                                <div class="col-lg-8 col-md-6 col-sm-12">
+                                                  <div class="h5 pt-1"><b>CREDIT / DEBIT CARD PAYMENT</b></div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6 col-sm-12 justify-content-right">
+                                                  <img src="https://img.icons8.com/color/36/000000/visa.png" width="30px"/>
+                                                  <img src="https://img.icons8.com/color/36/000000/mastercard.png" width="30px"/>
+                                                  <img src="https://img.icons8.com/color/36/000000/amex.png" width="30px"/>
+                                                </div>
+                            
+                                              </div>
+                                            </div>
+                            
+                                            <div class="card-body">
+                                                          
+                                              <div class="form-group">
+                                                <label for="cc-number" class="control-label">CARD NUMBER</label>
+                                                <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required/>
+                                              </div>
+                            
+                                              <div class="row">
+                            
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <label for="cc-exp" class="control-label">CARD EXPIRY</label>
+                                                    <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required/>
+                                                  </div>
+                                                </div>
+                            
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <label for="cc-cvc" class="control-label">CARD CVC</label>
+                                                    <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required/>
+                                                  </div>
+                                                </div>
+                            
+                                              </div>
+                            
+                                              <div class="form-group">
+                                                 <label for="numeric" class="control-label">CARD HOLDER NAME</label>
+                                                 <input type="text" class="input-lg form-control" placeholder="XXXX XXXX" required/>
+                                              </div>
+                            
+                                              <div class="form-group py-3">
+                                                <a href="credit-card-confirmation.html"><input value="Proceed payment" type="button" class="btn btn-success btn-sm form-control"/></a>
+                                              </div>
+                            
+                                            </div>
+
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+
+                        </form>
+                  </div>
+              </div>
+          </div>
+
+          <button class="btn btn-success btn-sm btn-rounded p-4 my-4 custom-width" type="submit"><h5>Submit form</h5></button>
+      
+      </div>
+                         
+    </main>
+
+
+
+    <!--FOOTER-->
+    
+      <nav class="navbar d-flex justify-content-center navbar-light bg-grey p-5 mt-5">
+        <a class="navbar-brand p-2" href="#"><img src="img/logo2.svg" width="200px"></a>
+
+        <div class="social-network p-4">
+          <h5 class="social-title"><b>Join the conversation</b></h5>
+          <div class="social-network-icons d-flex justify-content-center">
+            <a href="http://www.facebook.com/valehaw" target="_blank"><img class="s-n-icon img-fluid float-left" src="https://img.icons8.com/plasticine/100/000000/facebook-new.png" width="80px"/></a>
+            <a href="http://www.twitter.com/valehaw" target="_blank"><img class="s-n-icon img-fluid float-left" src="https://img.icons8.com/plasticine/100/000000/twitter.png" width="80px"/></a>
+            <a href="http://www.youtube.com/valehaw" target="_blank"><img class="s-n-icon img-fluid float-left" src="https://img.icons8.com/plasticine/100/000000/youtube.png" width="80px"/></a>
+            <a href="http://www.instagram.com/valehaw" target="_blank"><img class="s-n-icon img-fluid float-left" src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" width="80px"/></a>
+            
+          </div>
+        </div>
+        
+        <form class="form-inline p-2">
+          <input class="form-control mr-sm-2" type="email" placeholder="My email address is..." aria-label="email">
+          <button class="btn btn-success my-2 my-sm-0" type="email">Sign Up</button>
+        </form>
+      </nav> 
+    
+    
+    <footer class="blog-footer p-2">
+      <p class="footer-p">Copyright 2020 - <a class="text-secondary" href="#">Condé Nast Traveler</a> by <a class="text-secondary" href="https://instagram.com/valehaw" target="_blank">@valehaw</a>.</p>
+      <p>
+        <a class="text-white" href="#"><b>Back to top</b></a>
+      </p> 
+      
+    </footer>
+
+    <!--FIN FOOTER-->
+   
+  
+
+
+    <!-- Optional JavaScript -->
+
+    <!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+    
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script>
+        $(document).ready(function(){
+		var date_input=$('input[name="date"]'); //our date input has the name "date"
+		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		date_input.datepicker({
+			format: 'mm/dd/yyyy',
+			container: container,
+			todayHighlight: true,
+			autoclose: true,
+		})
+	})
+
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+
+
+  
+            
+
+
+
+
+
+
+            (function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+
+$(document).ready(function() {
+$('.datepicker').pickadate();
+$('.datepicker').removeAttr('readonly');
+});
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/*
+ * General Styles
+ */
+
+
+.buscador{
+    background: red;
+    border-radius: 5px;
+}
+
+.bg-dark-blue{
+    background: #2a4d59;
+}
+
+.bg-dark-green{
+    background: #324401;
+}
+
+.bg-black{
+    background: black;
+}
+
+.tour-padding{
+    padding-top: 100px;
+}
+
+.border-none{
+    border: none;
+}
+
+.font-1{
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.font-2{
+    font-size: 0.8rem;
+}
+
+.custom-width{
+    width: 100%;
+}
+
+
+/*
+ * Footer
+ */
+
+ .social-network{
+     margin: 0 70px;
+ }
+
+ .social-title{
+     font-size: 1rem;
+     margin: 0;
+ }
+
+ .bg-grey{
+     background: #848f89;
+ }
+
+ .blog-footer {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background: #3c3c3c;
+  }
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
+  .footer-p{
+      margin: 5px;
+      font-size: 0.7rem;
+  }
+  
+
+
+/*.alto-5{
+    min-height: 190px;
+    background: orange;
+}*/
