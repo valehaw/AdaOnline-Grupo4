@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<link href="styles.css" rel="stylesheet">-->
+    <title>DOM + EVENTOS</title>
+  </head>
+  <body>
+
+    <!--Antes cuando queríamos crear una etiqueta web, poníamos un div con un id. Esto quedó reemplazado cuando apareció HTML5: header, footer, etc.-->
+
+
+    <header>
+      <!-- Logo -->
+      <!-- Buscador -->
+
+      <nav id="nav-primary">
+        <!--esta bueno ponerle un id, proque estas etiquetas pueden estar repetidas-->
+      </nav>
+
+    </header>
+
+    <main><!--Esta etiqueta es única-->
+      
+      <section id="noticias">
+        
+        <h2>NOTICIAS</h2>
+      
+      </section>
+    
+    </main> 
+
+    <footer></footer>
+
+
+
+
+
+    <script src="script.js"></script> 
+    <!--el js va abajo, para que primero cargue el contenido y luego el resto. Si se pone arriba y el js es muy cargado.. va a cargar primero el js antes que el contenido y se va a ver raro-->
+    
+    <!--El orden en que se ponen los js también es importante, porque si lo pongo en desorden y tengo funciones en el segundo js y este está puesto primero.. no va a funcionar. -->
+  </body>
+</html>
