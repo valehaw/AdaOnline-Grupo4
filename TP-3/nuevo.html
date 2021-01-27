@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>TRABAJO PRÁCTICO 3</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/d60fda71a4.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+
+
+        <!-- ADD NEW EMPLOYEE MODAL -->
+        <form action="" class="form" id="myForm">
+            <div class="modal fade" id="newuser" role="dialog" aria-labelledby="form-modal"
+                aria-hidden="true">
+                
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <div class="modal-title text-secondary modal-title-specs text-decoration-underline">Add New Employee</div>
+                            <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+
+                                        <div class="form-group" id="user-name">
+                                            <label for="name" class="form-label text-secondary label-textspecs">Fullname:</label>
+                                            <div class="form-group-input">
+                                                <input type="text" name="name" id="fullname" class="form-control"
+                                                    placeholder="Enter your fullname..." max="50" required>
+                                                    <i class="fas fa-check-circle"></i>
+                                                    <i class="fas fa-exclamation-circle"></i>
+                                                    <small>Error message</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" id="user-email">
+                                            <label for="email" class="form-label text-secondary label-textspecs">Email:</label>
+                                            <div class="form-group-input">
+                                                <input type="email" name="email" id="email" class="form-control"
+                                                    placeholder="enteryouremail@domain.com" required>
+                                                    <i class="fas fa-check-circle"></i>
+                                                    <i class="fas exclamation-circle"></i>
+                                                    <small>Error message</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" id="user-address">
+                                            <label for="address" class="form-label text-secondary label-textspecs">Address:</label>
+                                            <div class="form-group-input">
+                                                <input type="text" name="address" id="address" class="form-control"
+                                                    placeholder="Enter your address..." max="60" required>
+                                                    <i class="fas fa-check-circle"></i>
+                                                    <i class="fas exclamation-circle"></i>
+                                                    <small>Error message</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" id="user-phone">
+                                            <label for="phone" class="form-label text-secondary label-textspecs">Phone Number</label>
+                                            
+                                            <div class="form-group-input">
+                                                <input type="tel" name="phone" id="phone" class="form-control"
+                                                    placeholder="Enter your Phone Number..." required>
+                                                    <i class="fas fa-check-circle"></i>
+                                                    <i class="fas exclamation-circle"></i>
+                                                    <small>Error message</small>
+                                            </div>
+
+                                        </div>
+
+                                        <br>
+
+                                        <div class="modal-footer">
+                                            <div class="form-group">
+                                                <button id="btn-newemployee" type="submit" class="btn btn-success">Submit</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>          
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+
+        
+    <!-- Optional JavaScript -->
+   
+</body>
+</html>
