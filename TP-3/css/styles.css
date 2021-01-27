@@ -50,7 +50,7 @@ tbody{
     color: #8699ad;
   }
 
-.form-group-input {
+/* .form-group-input {
     margin-bottom: 10px;
     padding-bottom: 10px;
     position: relative;
@@ -63,9 +63,9 @@ tbody{
     font-size: 14px;
     padding: 10px;
     width: 100%;
-} 
+}  */
 
-.form-group-input i {
+/* .form-group-input i {
     position: absolute;
     right: 15px;
     top: 10px;
@@ -98,7 +98,7 @@ tbody{
 .form-group-input.error small{
     color: #e74c3c;
     visibility: visible;
-}
+} */
 
 footer{
     background-color: #3c536d;
