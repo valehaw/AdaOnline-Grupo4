@@ -61,10 +61,12 @@ const actionsSection = () => {
         const tableData = document.createElement('td');
         
         editBtn.innerHTML = `<i class="material-icons" title="Edit">&#xE254;</i>`;
+        editBtn.className= 'btn text-warning p-0';
         editBtn.setAttribute('data-toggle', 'modal');
         editBtn.setAttribute('data-target', '#editemployee');
         
         deleteBtn.innerHTML = `<i class="material-icons" title="Delete">&#xE872;</i>`;   
+        deleteBtn.className= 'btn text-danger p-0';
         deleteBtn.setAttribute('data-toggle', 'modal');
         deleteBtn.setAttribute('data-target', '#deleteemployee');
 
@@ -193,11 +195,9 @@ btnSubmitEdited.addEventListener('click', () => {
 
 
 
-// /************* VALIDACIÓN DE FORMULARIO ADD COOONNN EXPRESIONES REGULARES **************/
+// ************* VALIDACIÓN DE FORMULARIO ADD COOONNN EXPRESIONES REGULARES **************/
 
-    
-
-//     const validation = () => {
+// function validation(){
  
 //     let username = document.getElementById('fullname').value;
 //     let useremail = document.getElementById('email').value;
@@ -210,36 +210,30 @@ btnSubmitEdited.addEventListener('click', () => {
 //     let emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 //     let addresscheck = /[a-zA-Z0-9_+-]{1,60}/;
 //     let phonecheck = /[\s-\d]{8,}/;
-
-
-//     if(usercheck.test(username)){
-//         document.getElementById('usererror').innerHTML="";
-//     }else{
-//         document.getElementById('usererror').innerHTML="** The Username is Invalid!";
-//         return false;
-//     }
-
-//     if(emailcheck.test(useremail)){
-//         document.getElementById('emailerror').innerHTML="";
-//     }else{
-//         document.getElementById('emailerror').innerHTML="** The Email is Invalid!";
-//         return false;
-//     }
-
-//     if(addresscheck.test(useraddress)){
-//         document.getElementById('addresserror').innerHTML="";
-//     }else{
-//         document.getElementById('addresserror').innerHTML="** The Address is Invalid!";
-//         return false;
-//     }
-
-//     if(phonecheck.test(userphone)){
-//         document.getElementById('phoneerror').innerHTML="";
-//     }else{
-//         document.getElementById('phoneerror').innerHTML="** The Phone Number is Invalid!";
-//         return false;
-//     }
-
+// if(usercheck.test(username)){
+//     document.getElementById('usererror').innerHTML="";
+// }else{
+//     document.getElementById('usererror').innerHTML="** The Username is Invalid!";
+//     return false;
+// }
+// if(emailcheck.test(useremail)){
+//     document.getElementById('emailerror').innerHTML="";
+// }else{
+//     document.getElementById('emailerror').innerHTML="** The Email is Invalid!";
+//     return false;
+// }
+// if(addresscheck.test(useraddress)){
+//     document.getElementById('addresserror').innerHTML="";
+// }else{
+//     document.getElementById('addresserror').innerHTML="** The Address is Invalid!";
+//     return false;
+// }
+// if(phonecheck.test(userphone)){
+//     document.getElementById('phoneerror').innerHTML="";
+// }else{
+//     document.getElementById('phoneerror').innerHTML="** The Phone Number is Invalid!";
+//     return false;
+// }
 // }
 
 
