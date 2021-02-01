@@ -50,6 +50,11 @@ tbody{
     color: #8699ad;
   }
 
+input{
+    width: 350px;
+    height: 35px;
+}
+
 /* .form-group-input {
     margin-bottom: 10px;
     padding-bottom: 10px;

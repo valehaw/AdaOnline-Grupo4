@@ -64,7 +64,7 @@ const actionsSection = () => {
         editBtn.setAttribute('data-toggle', 'modal');
         editBtn.setAttribute('data-target', '#editemployee');
         
-        deleteBtn.innerHTML = `<i class="material-icons" title="Delete">&#xE872;</i>`;
+        deleteBtn.innerHTML = `<i class="material-icons" title="Delete">&#xE872;</i>`;   
         deleteBtn.setAttribute('data-toggle', 'modal');
         deleteBtn.setAttribute('data-target', '#deleteemployee');
 
@@ -193,103 +193,102 @@ btnSubmitEdited.addEventListener('click', () => {
 
 
 
+// /************* VALIDACIÓN DE FORMULARIO ADD COOONNN EXPRESIONES REGULARES **************/
 
-// /************* FUNCION PARA AGREGAR EMPLEADO **************/
+    
 
-// const employeeData = () => {
-  
-//     const employeeFullname = document.getElementById('fullname');
-//     const employeeEmail = document.getElementById('email');
-//     const employeeAddress = document.getElementById('address');
-//     const employeePhone = document.getElementById('phone');
-   
+//     const validation = () => {
+ 
+//     let username = document.getElementById('fullname').value;
+//     let useremail = document.getElementById('email').value;
+//     let useraddress = document.getElementById('address').value;
+//     let userphone = document.getElementById('phone').value;
+    
+    
+//     //regex101.com
+//     let usercheck = /^[A-Za-z. ]{1,50}$/; 
+//     let emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+//     let addresscheck = /[a-zA-Z0-9_+-]{1,60}/;
+//     let phonecheck = /[\s-\d]{8,}/;
 
-//     const fullname = employeeFullname.value;
-//     const email = employeeEmail.value;
-//     const address = employeeAddress.value;
-//     const phone = employeePhone.value;
-//     return { fullname, email, address, phone }
+
+//     if(usercheck.test(username)){
+//         document.getElementById('usererror').innerHTML="";
+//     }else{
+//         document.getElementById('usererror').innerHTML="** The Username is Invalid!";
+//         return false;
+//     }
+
+//     if(emailcheck.test(useremail)){
+//         document.getElementById('emailerror').innerHTML="";
+//     }else{
+//         document.getElementById('emailerror').innerHTML="** The Email is Invalid!";
+//         return false;
+//     }
+
+//     if(addresscheck.test(useraddress)){
+//         document.getElementById('addresserror').innerHTML="";
+//     }else{
+//         document.getElementById('addresserror').innerHTML="** The Address is Invalid!";
+//         return false;
+//     }
+
+//     if(phonecheck.test(userphone)){
+//         document.getElementById('phoneerror').innerHTML="";
+//     }else{
+//         document.getElementById('phoneerror').innerHTML="** The Phone Number is Invalid!";
+//         return false;
+//     }
+
 // }
 
 
 
-// myForm.addEventListener('submit', function (e) {
-//     e.preventDefault();
-
-//     //const formData = new FormData(this);
-
-//     fetch(`${base}users`, {
-//         method: 'POST',
-//         body: JSON.stringify(employeeData()),
-//         headers:{
-//             "Content-Type": "application/json"
-//         }
-//     }).then(function (response){
-//         if (response) {
-//             location.href = 'index.html';
-//         }
-//         return response.json();
-//     }).then(function (json){
-//         console.log(json);
-//     }).catch(function (error){
-//         console.error(error);
-//     })
-
-// });
 
 
 
+//************* FUNCION PARA AGREGAR EMPLEADO **************/
 
-// /************* VALIDACIÓN DE FORMULARIO ADD **************/
+const employeeData = () => {
+  
+    const employeeFullname = document.getElementById('fullname');
+    const employeeEmail = document.getElementById('email');
+    const employeeAddress = document.getElementById('address');
+    const employeePhone = document.getElementById('phone');
+   
 
-function validation(){
-
- 
-        let username = document.getElementById('fullname').value;
-        let useremail = document.getElementById('email').value;
-        let useraddress = document.getElementById('address').value;
-        let userphone = document.getElementById('phone').value;
-        
-        
-        //regex101.com
-        let usercheck = /^[A-Za-z. ]{1,50}$/; 
-        let emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
-        let addresscheck = /[a-zA-Z0-9_+-]{1,60}/;
-        let phonecheck = /[\s-\d]{8,}/;
-    
-
-
-
-    if(usercheck.test(username)){
-        document.getElementById('usererror').innerHTML="";
-    }else{
-        document.getElementById('usererror').innerHTML="** The Username is Invalid!";
-        return false;
-    }
-
-
-    if(emailcheck.test(useremail)){
-        document.getElementById('emailerror').innerHTML="";
-    }else{
-        document.getElementById('emailerror').innerHTML="** The Email is Invalid!";
-        return false;
-    }
-
-    if(addresscheck.test(useraddress)){
-        document.getElementById('addresserror').innerHTML="";
-    }else{
-        document.getElementById('addresserror').innerHTML="** The Address is Invalid!";
-        return false;
-    }
-
-    if(phonecheck.test(userphone)){
-        document.getElementById('phoneerror').innerHTML="";
-    }else{
-        document.getElementById('phoneerror').innerHTML="** The Phone Number is Invalid!";
-        return false;
-    }
-
+    const fullname = employeeFullname.value;
+    const email = employeeEmail.value;
+    const address = employeeAddress.value;
+    const phone = employeePhone.value;
+    return { fullname, email, address, phone }
 }
+
+
+
+myForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        //const formData = new FormData(this);
+    
+        fetch(`${base}users`, {
+            method: 'POST',
+            body: JSON.stringify(employeeData()),
+            headers:{
+                "Content-Type": "application/json"
+            }
+        }).then(function (response){
+            if (response) {
+                location.href = 'index.html';
+            }
+            return response.json();
+        }).then(function (json){
+            console.log(json);
+        }).catch(function (error){
+            console.error(error);
+        })
+    
+    });
 
 
 
@@ -325,7 +324,7 @@ function searchTable(filter){
 
 
 
-// /************* VALIDACIÓN DE FORMULARIO ADD: no es con expresiones regulares **************/
+// /************* VALIDACIÓN DE FORMULARIO ADD: NOOO es con expresiones regulares **************/
 
 // const validForm = document.getElementById('myForm');
 // const validFullname = document.getElementById('fullname');
