@@ -1,0 +1,14 @@
+.btn{
+    background-color: transparent;
+    border: 0;
+    width: 120px;
+    border:1px solid black;
+}
+
+.btn-horizontal{
+    display: flex;
+}
+
+.btn-primary{
+    background-color: pink;
+}
