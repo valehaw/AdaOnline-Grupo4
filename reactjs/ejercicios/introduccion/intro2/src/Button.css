@@ -1,0 +1,15 @@
+.button {
+    background-color: cadetblue;
+    color: #FFF;
+    border: 0;
+    padding: 5px 20px;
+    margin: 10px
+}
+
+.button-primary {
+    background-color: crimson;
+}
+
+.button-secondary {
+    background-color: blueviolet;
+}
